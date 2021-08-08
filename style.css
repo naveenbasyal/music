@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+html {
+  font-size: 62.5%;
+}
+
+.box {
+  height: 100vh;
+  width: 100%;
+  background: #333333;
+  background: -webkit-linear-gradient(to right, #dd1818, #333333);
+  background: linear-gradient(to right, #dd1818, #333333);
+
+  display: flex;
+  flex-direction: row;
+}
+.left {
+  position: relative;
+  top: 30%;
+  left: 20%;
+  width: 24%;
+  height: 40%;
+}
+.right {
+  position: relative;
+  left: 30%;
+  height: 100%;
+  width: 40%;
+}
+#logo {
+  position: absolute;
+  top: 6%;
+  left: 23%;
+  font-size: 2.4rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.box #music-logo {
+  position: absolute;
+  top: 7%;
+  left: 20%;
+  font-size: 2.4rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+#track_image {
+  max-width: 100%;
+  border: 5px solid #fff;
+}
+.autoplay::before {
+  content: attr(data-tooltip);
+  font-size: 2rem;
+  color: #e0dddd;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+  padding: 5px;
+  border-radius: 6px;
+  bottom: 20px;
+  opacity: 0;
+  width: max-content;
+}
+.autoplay:hover::before {
+  opacity: 1;
+}
+
+.show_song_no {
+  position: absolute;
+  top: 3.5%;
+  right: 8%;
+  color: #fff;
+  font-size: 1.9rem;
+  letter-spacing: 4px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+}
+#title {
+  position: relative;
+  top: 10%;
+  color: #fff;
+  display: grid;
+  letter-spacing: 1px;
+  place-items: center;
+  font-size: 2.8rem;
+}
+#artist {
+  position: relative;
+  top: 11%;
+  color: #fff;
+  opacity: 0.8;
+  display: grid;
+  font-style: italic;
+  letter-spacing: 1px;
+  place-items: center;
+  font-size: 1.65rem;
+}
+.middle {
+  position: relative;
+  top: 24%;
+}
+.middle button {
+  cursor: pointer;
+  
+  margin-right: 20px;
+  background: #e99191;
+  background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+
+  width: 10%;
+  font-size: 3.5rem;
+}
+.middle i {
+  font-size: 3rem;
+  color: #fff;
+  width: 100%;
+}
+.middle .btn {
+  display: inline;
+  width: 100%;
+  position: relative;
+  left: 32%;
+}
+.autoplay #auto i {
+  width: 70px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+}
+#auto {
+  cursor: pointer;
+}
+
+.autoplay i {
+  font-size: 3rem;
+  color: #fff;
+  width: 100%;
+  background: #e99191;
+  background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  border-radius: 20px;
+}
+
+.duration {
+  display: grid;
+  place-items: center;
+  position: relative;
+  top: 30%;
+}
+.duration #duration_slider {
+  height: 25%;
+  width: 45%;
+  cursor: pointer;
+}
+.autoplay {
+  position: relative;
+  top: 44%;
+  left: 43%;
+  display: grid;
+  width: min-content;
+  place-items: center;
+}
+@media (max-width: 1180px) and (min-width: 760px) {
+  .right {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    height: 63%;
+    width: 99.57%;
+  }
+  #track_image {
+    height: 56%;
+  }
+  #logo {
+    font-size: 4.5rem;
+    top: 1.6%;
+    left: 10%;
+  }
+  .box #music-logo {
+    font-size: 4.5rem;
+    top: 2.4%;
+    left: 4%;
+  }
+  .left {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 50%;
+    display: grid;
+    place-items: center;
+  }
+  #artist {
+    font-size: 4.8rem;
+  }
+  #title {
+    font-size: 5.8rem;
+  }
+  .autoplay #auto i {
+    font-size: 8rem;
+    height: 12rem;
+    width: 12rem;
+    display: grid;
+    place-items: center;
+  }
+  .duration #duration_slider {
+    height: 100%;
+    width: 70%;
+  }
+  .middle button i {
+    font-size: 5rem;
+    height: 90px;
+    display: grid;
+    place-items: center;
+  }
+  .middle button {
+    width: 18%;
+  }
+  .middle .btn {
+    left: 21%;
+  }
+  .show_song_no {
+    position: absolute;
+    top: -50%;
+    font-size: 4rem;
+  }
+}
+@media (max-width: 750px) and (min-width: 220px) {
+  .box {
+    display: flex;
+    flex-direction: column;
+  }
+  .right {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    height: 63%;
+    width: 99.57%;
+  }
+  #track_image {
+    height: 70%;
+    width: 70%;
+  }
+  .left {
+    position: relative;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 34%;
+    display: grid;
+    place-items: center;
+  }
+  .middle button {
+    width: 16%;
+  }
+  .middle .btn {
+    left: 19.5%;
+  }
+  .autoplay {
+    top: 30%;
+    left: 37%;
+  }
+  .duration #duration_slider {
+    height: 30%;
+    width: 70%;
+  }
+  #logo {
+    top: 2%;
+    left: 18%;
+  }
+  .box #music-logo {
+    top: 2.5%;
+    left: 10%;
+  }
+  .show_song_no {
+    position: absolute;
+    top: -50%;
+  }
+}

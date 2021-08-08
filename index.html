@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>music player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div class="box">
+      <p id="logo">Music</p><i class="fa fa-music" id="music-logo"></i>
+
+      <!--- left part --->
+      <div class="left">
+        <!--- song img --->
+        <img id="track_image" />
+      </div>
+
+      <!--- right part --->
+      <div class="right">
+        <div class="show_song_no">
+          <p id="present">1</p>
+          <p>/</p>
+          <p id="total">10</p>
+        </div>
+        <!--- song title & artist name --->
+        <p id="title">title.mp3<br /></p>
+        <p id="artist">Artist name</p>
+        <!--- middle part --->
+        <div class="middle">
+          <div class="btn">
+            <button onclick="previous_song()" id="pre">
+              <i class="fa fa-step-backward" aria-hidden="true"></i>
+            </button>
+            <button onclick="justplay()" id="play">
+              <i class="fa fa-play" aria-hidden="true"></i>
+            </button>
+            <button onclick="next_song()" id="next">
+              <i class="fa fa-step-forward" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+
+        <!--- song duration part --->
+        <div class="duration">
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            id="duration_slider"
+            onchange="change_duration()"
+          />
+        </div>
+        <div class="autoplay" data-tooltip="Autoplay">
+          <div id="auto" onclick="autoplay_switch()">
+            <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--- Add javascript file --->
+    <script src="script.js"></script>
+  </body>
+</html>
